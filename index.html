@@ -10,13 +10,19 @@
 </head>
 
 <body>
-    <h1>Countries</h1>
+    <h1>Global Explorer 🌍</h1>
 
     <input class="txt-input" type="text" id="textInput" name="textInput" placeholder="Enter Contry" />
 
     <button class="search-bth" onclick="onGetCountryInfo()">Search</button>
+    <div class="country-details-container">
 
-    <pre class="countryData"></pre>
+        <h2 class="country-name"></h2>
+        <img class="country-flag">
+        <p class="populaion"></p>
+        <p class="area"></p>
+
+    </div>
 
 
     <script src="lib/jquery-3.7.1.js"></script>
