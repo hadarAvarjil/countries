@@ -1,16 +1,12 @@
 'use strict'
 
-
-
 function onGetCountryInfo() {
     const inputElement = document.querySelector('.txt-input')
     const country = inputElement.value
     if (country) {
-        getCountry(country, renderInfo)
+        getCountryByName(country, renderInfo)
     }
 }
-
-
 
 function renderInfo(data) {
     console.log(data[0].name.common);
@@ -30,6 +26,3 @@ function renderInfo(data) {
 
 }
 
-function getCountry(country, cb) {
-    $.get(`https://restcountries.com/v3.1/name/${country}`, cb)
-}
