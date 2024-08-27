@@ -1,17 +1,17 @@
 'use strict'
 
-function onGetCountryInfo() {
+function onGetCountryInfo() { 
+    adjustDisplay('loader')
     const inputElement = document.querySelector('.txt-input')
     const country = inputElement.value
     if (country) {
         getCountryByName(country, renderInfo)
+        
     }
 }
 
 function renderInfo(data) {
-    console.log(data[0].name.common);
-
-    console.log(data);
+    adjustDisplay('results')
     const titileElement = document.querySelector('.country-name')
     titileElement.innerHTML = data[0].name.common
 
@@ -27,6 +27,24 @@ function renderInfo(data) {
 }
 
 function onClearCache(){
-    onClearCache()
+    clearCache()
 }
 
+function adjustDisplay(status) {
+	const elData = document.querySelector('.country-details-container')
+	const elLoader = document.querySelector('.loader')
+
+	elData.classList.add('hidden')
+	elLoader.classList.add('hidden')
+
+	switch (status) {
+		case 'loader':
+			elLoader.classList.remove('hidden')
+			break
+
+		case 'results':
+			elData.classList.remove('hidden')
+            console.log('hey');
+			break
+	}
+}

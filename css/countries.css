@@ -6,7 +6,7 @@
 
 @font-face {
     font-family: alexandria;
-    src: url(font/Alexandria-Light.ttf);
+    src: url(/font/Alexandria-Light.ttf);
 }
 
 body {
@@ -166,4 +166,27 @@ p {
     transition: background-color 0.3s, box-shadow 0.3s;
     outline: none;
     margin-bottom: 3em;
+}
+
+.clear-bth {
+    padding: 10px 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #295F98;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    outline: none;
+    margin-bottom: 3em;
+}
+
+.loader {
+    margin: auto;
+    width: 30%;
+}
+
+.hidden {
+    display: none;
 }

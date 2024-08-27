@@ -31,7 +31,7 @@ function loadFromStorage(key) {
 }
 
 
-function onClearCache() {
+function clearCache() {
     gCountries = {}
     saveToStorage('countries', gCountries)
 }
