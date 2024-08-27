@@ -1,6 +1,7 @@
 'use strict'
 
 function onGetCountryInfo() {
+    adjustDisplay('loader')
     const inputElement = document.querySelector('.txt-input')
     const country = inputElement.value
     if (country) {
@@ -9,9 +10,7 @@ function onGetCountryInfo() {
 }
 
 function renderInfo(data) {
-    console.log(data[0].name.common);
-
-    console.log(data);
+    adjustDisplay('results')
     const titileElement = document.querySelector('.country-name')
     titileElement.innerHTML = data[0].name.common
 
@@ -26,3 +25,20 @@ function renderInfo(data) {
 
 }
 
+function adjustDisplay(status) {
+	const elData = document.querySelector('.country-details-container')
+	const elLoader = document.querySelector('.loader')
+
+	elData.classList.add('hidden')
+	elLoader.classList.add('hidden')
+
+	switch (status) {
+		case 'loader':
+			elLoader.classList.remove('hidden')
+			break
+
+		case 'results':
+			elData.classList.remove('hidden')
+			break
+	}
+}

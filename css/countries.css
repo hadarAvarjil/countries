@@ -153,3 +153,12 @@ img {
 p {
     padding: .9em;
 }
+
+.loader {
+    margin: auto;
+    width: 30%;
+}
+
+.hidden {
+    display: none;
+}
