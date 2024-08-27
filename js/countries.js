@@ -1,12 +1,12 @@
 'use strict'
 
-function onGetCountryInfo() { 
+function onGetCountryInfo() {
     adjustDisplay('loader')
     const inputElement = document.querySelector('.txt-input')
     const country = inputElement.value
     if (country) {
         getCountryByName(country, renderInfo)
-        
+
     }
 }
 
@@ -26,25 +26,34 @@ function renderInfo(data) {
 
 }
 
-function onClearCache(){
+function onClearCache() {
     clearCache()
 }
 
 function adjustDisplay(status) {
-	const elData = document.querySelector('.country-details-container')
-	const elLoader = document.querySelector('.loader')
+    const elData = document.querySelector('.country-details-container')
+    const elLoader = document.querySelector('.loader')
 
-	elData.classList.add('hidden')
-	elLoader.classList.add('hidden')
+    elData.classList.add('hidden')
+    elLoader.classList.add('hidden')
 
-	switch (status) {
-		case 'loader':
-			elLoader.classList.remove('hidden')
-			break
+    switch (status) {
+        case 'loader':
+            elLoader.classList.remove('hidden')
+            break
 
-		case 'results':
-			elData.classList.remove('hidden')
-            console.log('hey');
-			break
-	}
+        case 'results':
+            elData.classList.remove('hidden')
+            break
+    }
+}
+
+function handleSubmit(event) {
+    event.preventDefault()
+    const inputElement = document.querySelector('.txt-input')
+    const country = inputElement.value
+    if (country) {
+        getCountryByName(country, renderInfo)
+
+    }
 }

@@ -190,3 +190,24 @@ p {
 .hidden {
     display: none;
 }
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px;
+    color: #333; 
+}
+
+.input-container {
+    position: relative;
+    margin: auto;
+    width: 80%;
+}
+
+.txt-input {
+    width: 100%;
+    padding-right: 40px; 
+}
