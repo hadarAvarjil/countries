@@ -25,6 +25,10 @@ function renderInfo(data) {
 
 }
 
+function onClearCache(){
+    onClearCache()
+}
+
 function adjustDisplay(status) {
 	const elData = document.querySelector('.country-details-container')
 	const elLoader = document.querySelector('.loader')
