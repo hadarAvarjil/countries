@@ -26,3 +26,7 @@ function renderInfo(data) {
 
 }
 
+function onClearCache(){
+    onClearCache()
+}
+
