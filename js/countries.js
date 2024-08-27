@@ -1,11 +1,12 @@
 'use strict'
 
-function onGetCountryInfo() {
+function onGetCountryInfo() { 
     adjustDisplay('loader')
     const inputElement = document.querySelector('.txt-input')
     const country = inputElement.value
     if (country) {
         getCountryByName(country, renderInfo)
+        
     }
 }
 
@@ -26,7 +27,7 @@ function renderInfo(data) {
 }
 
 function onClearCache(){
-    onClearCache()
+    clearCache()
 }
 
 function adjustDisplay(status) {
@@ -43,6 +44,7 @@ function adjustDisplay(status) {
 
 		case 'results':
 			elData.classList.remove('hidden')
+            console.log('hey');
 			break
 	}
 }

@@ -6,7 +6,7 @@
 
 @font-face {
     font-family: alexandria;
-    src: url(font/Alexandria-Light.ttf);
+    src: url(/font/Alexandria-Light.ttf);
 }
 
 body {
